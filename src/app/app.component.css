@@ -1,38 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
 h1 {
   text-align: center;
 }
 
-table {
+.table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  display: block;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.table:after{
+    visibility: hidden;
+  	display: block;
+  	font-size: 0;
+  	content: " ";
+  	clear: both;
+  	height: 0;
 }
 
-tr:nth-child(even) {
+.tr {
+    width: 100%;
+}
+
+.thead {
+    font-weight: bold;
+    clear: both;
+}
+
+.tbody {
+    clear: both;
+}
+
+.td, .th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    float: left;
+    height: 17px;
+    overflow: hidden;
+    padding: 3px 1.8%;
+    width: 20%;
+}
+
+.tr:nth-child(even) {
   background-color: #dddddd;
-}
-
-.deleteBtn {
-    float: right;
-    color: red;
-}
-
-.clearFilters {
-    margin: 0 auto 2vh;
-    display: block;
-}
-
-select {
-    margin: 0 auto 2vh;
-    display: block;
-}
-
-.inputContainer {
-    margin: 3vh;
 }

@@ -1,0 +1,13 @@
+.tr {
+    width: 100%;
+}
+
+.td, .th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    float: left;
+    height: 17px;
+    overflow: hidden;
+    padding: 3px 1.8%;
+    width: 20%;
+}

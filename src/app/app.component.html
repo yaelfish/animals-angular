@@ -1,22 +1,20 @@
 <div class="container">
   <h1>Animals</h1>
   <div class="animalsTable">
-    <table id="table">
-      <thead>
-        <tr>
-          <!-- <th>ID Number</th> -->
-          <th id="nameTitle">Name</th>
-          <th>Age</th>
-          <th>Type</th>
-        </tr>
-      </thead>
-      <tbody id="tbody">
-        <tr *ngFor="let animal of animals">
-          <td>{{animal.name}}</td>
-          <td>{{animal.age}}</td>
-          <td>{{animal.type}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table" id="table">
+      <div class="thead">
+        <div class="tr">
+          <div class="th" id="indexId">Id</div>
+          <div class="th" id="nameTitle">Name</div>
+          <div class="th">Age</div>
+          <div class="th">Type</div>
+        </div>
+      </div>
+      <div class="tbody" id="tbody">
+        <div class="tr" *ngFor="let animal of animals; index as i">
+          <animal-row [animalData]="animal" [index]="i+1"></animal-row>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Animal } from './Entities/animal';
+// import { AnimalRowComponent } from './animal-row/animal-row.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,6 @@ import { Animal } from './Entities/animal';
 export class AppComponent {
 
   constructor(){
-    console.log("App component is working!", this.animals);
     this.animals = this.initData();
   }
 
@@ -5024,8 +5024,6 @@ export class AppComponent {
       rawAnimal[i] = new Animal(rawAnimal[i].name, rawAnimal[i].age, rawAnimal[i].type);
       animal.push(rawAnimal[i]);
     }
-
-    console.log(animal);
     return animal;
   }
 }
