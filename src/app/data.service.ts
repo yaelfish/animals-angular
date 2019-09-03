@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Animal } from './Entities/animal';
 
 @Injectable({
@@ -6,7 +7,19 @@ import { Animal } from './Entities/animal';
 })
 export class DataService {
 
-  constructor() { }
+  private _url: string = "../assets/data/animals.json"; // https://api-animals.herokuapp.com/api/animal
+  constructor(private http: HttpClient) { }
+
+  /**
+   * Http get request from the server (in our case local json file) to fetch the data
+   */
+  public getAnimalsData() {
+    return this.http.get(this._url);
+  }
+
+  /**
+  * Receive the observable sent as response and cast it into an array
+  */
 
   public initData(): Animal[] {
     const rawAnimal: any[] = [{
