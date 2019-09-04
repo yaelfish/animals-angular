@@ -8,11 +8,12 @@
           <div class="th" id="nameTitle">Name</div>
           <div class="th">Age</div>
           <div class="th">Type</div>
+          <div class="th">Delete</div>
         </div>
       </div>
       <div class="tbody" id="tbody">
         <div class="tr" *ngFor="let animal of animals; index as i">
-          <animal-row [animalData]="animal" [index]="i+1"></animal-row>
+          <animal-row [animalData]="animal" [animalsArray]="animals" [index]="i+1"></animal-row>
         </div>
       </div>
     </div>

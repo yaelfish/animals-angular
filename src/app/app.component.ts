@@ -10,11 +10,10 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
 
+  public animals: Animal[] = [];
+  
   constructor(private dataService: DataService){
     this.animals = dataService.initData();
   }
-
-  public animals: Animal[] = [];
-
   
 }

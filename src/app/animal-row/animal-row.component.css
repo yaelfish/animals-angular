@@ -3,11 +3,20 @@
 }
 
 .td, .th {
-    border: 1px solid #dddddd;
+     border: 1px solid #dddddd;
     text-align: center;
-    float: left;
+    display: inline-flex;
     height: 17px;
     overflow: hidden;
     padding: 3px 1.8%;
-    width: 20%;
+    width: 16%;
 }
+
+.deleteBtn {
+    width: 19.7%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+}
+

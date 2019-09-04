@@ -7,7 +7,10 @@ import { Animal } from './Entities/animal';
 })
 export class DataService {
 
+  animal: Animal[] = [];
+
   private _url: string = "../assets/data/animals.json"; // https://api-animals.herokuapp.com/api/animal
+  
   constructor(private http: HttpClient) { }
 
   /**
@@ -155,12 +158,10 @@ export class DataService {
     }
     ];
 
-    const animal: Animal[] = [];
-
     for (let i = 0; i < rawAnimal.length; i++) {
       rawAnimal[i] = new Animal(rawAnimal[i].name, rawAnimal[i].age, rawAnimal[i].type);
-      animal.push(rawAnimal[i]);
+      this.animal.push(rawAnimal[i]);
     }
-    return animal;
+    return this.animal;
   }
 }
